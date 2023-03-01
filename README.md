@@ -1,27 +1,31 @@
-# Codility_Assessment_Toy-Problem
-
-
-# Challenge 1: No ifs no buts(Toy Problem)
+# Challenge1
 Write a function that accepts two numbers a and b and returns whether a is smaller than, bigger than, or equal to b, as a string.
 
-I have  used the spaceship operator <=> to determine the comparison result. 
-The spaceship operator returns -1 if a is less than b, 0 if a is equal to b, and 1 if a is greater than b. 
- I then use the result to index into an array of strings to construct the final output string.
+e.g 
 
-# Challenge2: Ordered Count of Characters(Toy Problem)
+(5, 4)   ---> "5 is greater than 4"
+
+(-4, -7) ---> "-4 is greater than -7"
+
+(2, 2)   ---> "2 is equal to 2"
+
+There is only one problem...
+
+You cannot use if statements, and you cannot use the ternary operator ? 
+
+In fact, the word if and the character ? are not allowed in your code.
+
+# challenge2
+## Ordered Count of Characters
+
 Count the number of occurrences of each character and return it as a (list of arrays) in order of appearance. For empty output return (an empty list).
 
+Example:
 
+"abracadabra" ---->  [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
 
-I first initialize an empty hash called counts to keep track of the number of occurrences of each character, 
-and an empty array called result to store the results in the order of appearance.
-I then iterate through each character in the input string using each_char.
+"Code Wars -----> [['C', 1], ['o', 1], ['d', 1], ['e', 1], [' ', 1], ['W', 1], ['a', 1], ['r', 1], ['s', 1]]
 
+"233312", ------> [['2', 2], ['3', 3], ['1', 1 ]]
 
-Expected output  array.
-puts count_occurrences("Bikes Rider")  
-puts count_occurrences("Temple Run")   
-puts count_occurrences("222")      
-puts count_occurrences("")           # []        
-
-
+ 
