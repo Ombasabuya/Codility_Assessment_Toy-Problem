@@ -1,18 +1,20 @@
-def count_occurrences(str)
-    counts = {}
-    result = []
-    str.each_char do |c|
-      if counts[c]
-        counts[c] += 1
-      else
-        counts[c] = 1
-        result << [c, 1]
-      end
-    end
-    return result
-  end
+def string_count(input_str)
 
-puts count_occurrences("Bikes Rider")  
-puts count_occurrences("Temple Run")   
-puts count_occurrences("222")      
-puts count_occurrences("")           # []
+
+  hash_count = Hash.new(0)
+
+  input_str.each_char { |char| hash_count[char] += 1 }
+
+  result = hash_count.map { |char, count| [char, count] }
+
+  result.sort_by! { |char, _| input_str.index(char) }
+  result
+
+end
+
+
+print string_count("Bikes Rider") 
+print "\n"
+print string_count("Temple Run") 
+print "\n"
+print string_count("222") 
